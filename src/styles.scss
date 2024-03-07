@@ -1,0 +1,109 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+
+
+
+$main-collor: #0aad0a;
+$light-color: #f0f3f2;
+$shadow: rgba(145,158,171,0.2) 0px 2px 4px -1px,
+rgba(145, 158, 171, 0.14) 0px 4px 5px 0px,
+rgba(145, 158, 171, 0.12) 0px 1px 10px 0px;
+$main-font: "Encode Sans Expanded", sans-serif;
+$rating-color: #ffc908;
+$main-transition: 0.8s;
+
+::-webkit-scrollbar{
+  width: 10px;
+}
+::-webkit-scrollbar-track{
+  background-color: $light-color;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: $main-collor;
+}
+
+
+
+body {
+  font-family: $main-font;
+}
+
+.text-main{
+  color: $main-collor;
+}
+.text-main-light {
+  color: $light-color;
+}
+.bg-main {
+  background-color: $main-collor;
+}
+.bg-main-light{
+  background-color:$light-color;
+}
+.rating-color {
+  color: $rating-color;
+}
+.font-sm{
+  font-size: 11px;
+}
+.main-btn {
+  color: $light-color;
+  background-color: $main-collor;
+  padding: 4px 8px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  &display{
+    background-color: #078e076c;
+    color: #ffffff9c;
+    cursor: not-allowed;
+  }
+}
+.product {
+
+  &:hover {
+
+  }
+
+
+}
+.product {
+  border: 1px solid $main-collor;
+  border-radius: 5px;
+  padding: 4px;
+  box-shadow: $shadow;
+  overflow: hidden;
+  position: relative;
+  &:hover{
+    .main-btn {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    .heart{
+      right: 5px;
+    }
+  }
+  .main-btn {
+    transform: translateY(150%);
+    opacity: 0;
+    transition: 0.8s;
+  }
+  .heart {
+      color: red;
+      font-size: 30px;
+      position: absolute;
+      top: 5px;
+      right: -30px;
+      z-index: 999;
+      cursor: pointer;
+      transition: right 0.8s;
+  }
+}
+.active-link {
+  color: $light-color !important;
+  background-color: $main-collor  !important;
+  border-radius: 5px !important;
+}

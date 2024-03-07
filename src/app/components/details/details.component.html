@@ -1,0 +1,17 @@
+<section *ngIf="productDetails" class="w-75 mx-auto rounded shadow p-4  mb-4">
+  <div class="row d-flex align-items-center g-4">
+    <div class="col-md-3">
+      <img class="w-100" [src]="productDetails.imageCover" [alt]="">
+    </div>
+    <div class="col-md-9">
+        <h3 class="h6">{{productDetails.title}}</h3>
+        <p class="text-muted small">{{productDetails.description}}</p>
+        <span>{{productDetails.category.name}}</span>
+        <div class="d-flex align-items-center justify-content-between my-3">
+          <span class="small">{{productDetails.price | currency: 'EGP'}}</span>
+          <p class="mb-0"><i class="fas fa-star rating-color"></i>{{productDetails.ratingsAverage}}</p>
+        </div>
+        <button (click)="addProduct(productDetails._id, addBtn)" #addBtn class="main-btn w-100 py-2">+Add To Card</button>
+    </div>
+  </div>
+</section>
